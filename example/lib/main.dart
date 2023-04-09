@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:autoflow_text/autoflow_text.dart';
+import 'package:autoflow_text/autoflow_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,8 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: const <Widget>[
             Padding(
               padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: AutoFlowText(
-                text: "Lorem ipsum dolor sit amet. Sit unde cupiditate hic inventore perferendis sit laudantium pariatur. Aut fugiat voluptas ut itaque iste aut debitis sunt id fugiat incidunt vel doloremque iusto et laborum maiores ea ipsa voluptates! Et nesciunt voluptatem a iste voluptate rem fuga maxime et sunt veritatis.",
+              child: AutoFlowWidget(
+                widgets: [
+                  Text("Lorem ipsum dolor sit amet. Sit unde cupiditate hic inventore perferendis sit laudantium pariatur. Aut fugiat voluptas ut itaque iste aut debitis sunt id fugiat incidunt vel doloremque iusto et laborum maiores ea ipsa voluptates! Et nesciunt voluptatem a iste voluptate rem fuga maxime et sunt veritatis.")
+                ],
               ),
             ),
             SizedBox(
@@ -49,8 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: AutoFlowText(
-                text: "Lorem ipsum dolor sit amet. Sit unde cupiditate hic inventore perferendis sit laudantium pariatur. Aut fugiat voluptas ut itaque iste aut debitis sunt id fugiat incidunt vel doloremque iusto et laborum maiores ea ipsa voluptates! Et nesciunt voluptatem a iste voluptate rem fuga maxime et sunt veritatis.",
+              child: AutoFlowWidget(
+                widgets: [
+                  Text("Lorem ipsum dolor sit amet. Sit unde cupiditate hic inventore perferendis sit laudantium pariatur. Aut fugiat voluptas ut itaque iste aut debitis sunt id fugiat incidunt vel doloremque iusto et laborum maiores ea ipsa voluptates! Et nesciunt voluptatem a iste voluptate rem fuga maxime et sunt veritatis.")
+                ],
                 scrollDelay: Duration(seconds: 2),
                 scrollDuration: Duration(seconds: 10),
               ),
@@ -60,8 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
               padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-              child: AutoFlowText(
-                text: "Short",
+              child: AutoFlowWidget(
+                widgets: [
+                  Text("Short")
+                ],
               ),
             )
           ],

@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-class AutoFlowText extends StatefulWidget {
-  final String text;
+class AutoFlowWidget extends StatefulWidget {
+  final List<Widget> widgets;
 
   final Duration? scrollDelay;
   final Duration? scrollDuration;
 
-  const AutoFlowText({
+  const AutoFlowWidget({
     super.key,
-    required this.text,
+    required this.widgets,
     this.scrollDelay,
     this.scrollDuration,
   });
 
   @override
-  State<StatefulWidget> createState() => _AutoFlowTextState();
+  State<StatefulWidget> createState() => _AutoFlowWidgetState();
 }
 
-class _AutoFlowTextState extends State<AutoFlowText> with SingleTickerProviderStateMixin {
+class _AutoFlowWidgetState extends State<AutoFlowWidget> with SingleTickerProviderStateMixin {
   final _scrollCtrl = ScrollController();
 
   late AnimationController _animationCtrl;
@@ -102,7 +102,10 @@ class _AutoFlowTextState extends State<AutoFlowText> with SingleTickerProviderSt
         child: SingleChildScrollView(
           controller: _scrollCtrl,
           scrollDirection: Axis.horizontal,
-          child: Text(widget.text),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: widget.widgets,
+          ),
         ),
       ),
     );
