@@ -72,7 +72,8 @@ class _AutoFlowWidgetState extends State<AutoFlowWidget> with SingleTickerProvid
           evt.disallowIndicator();
         }
 
-        if (_scrollCtrl.position.atEdge && _scrollCtrl.offset > 0) {
+        // Hide fade if at end edge or no need for scrolling
+        if ((_scrollCtrl.position.atEdge && _scrollCtrl.offset > 0) || _scrollCtrl.position.maxScrollExtent == 0) {
           _showFade = false;
         } else {
           _showFade = true;

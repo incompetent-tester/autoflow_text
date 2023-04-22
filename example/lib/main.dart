@@ -69,7 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   Text("Short")
                 ],
               ),
-            )
+            ),
+            AutoFlowWidget(
+              widgets: [
+                Text("Short1 "),
+                Text("Short2 "),
+                Text("Short3 ")
+              ],
+            ),
           ],
         ),
       ),
